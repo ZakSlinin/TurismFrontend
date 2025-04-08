@@ -1,0 +1,107 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
+  line-height: 0;
+}
+.container .naming_of_page {
+  color: rgb(0, 48, 108);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+.container .map_container {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 48, 108);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.container .map_container .map {
+  width: 100%;
+  min-height: 40vw;
+  border-radius: 25px;
+  background: rgb(79, 78, 78);
+}
+.container .attractions_container {
+  width: 90vw;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.attraction {
+  line-height: 0;
+  width: 100%;
+  background: rgb(242, 242, 242);
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.attraction .image_conatiner {
+  border: 2px solid white;
+  border-radius: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+.attraction .image_conatiner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.attraction .info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 50%;
+  padding: 0 10px;
+}
+.attraction .info_container #attraction_name {
+  display: flex;
+  justify-content: flex-start;
+  color: rgb(88, 88, 88);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-align: left;
+  width: 100%;
+}
+.attraction .info_container .price_and_time_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.attraction .info_container .price_and_time_container .price_container {
+  display: flex;
+  flex-direction: column;
+}
+.attraction .add_attraction {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.attraction .add_attraction button {
+  border-radius: 25px;
+  background: rgb(171, 202, 211);
+  width: 90%;
+  border: none;
+  font-size: 20px;
+  color: rgb(27, 77, 88);
+  font-weight: 900;
+  text-align: center;
+}
+
+/*# sourceMappingURL=attractions.css.map */

@@ -1,0 +1,121 @@
+.container
+  width: 100%
+  display: flex
+  flex-direction: column
+  height: 100%
+  align-items: center
+  gap: 20px
+  line-height: 0
+
+  .naming_of_page
+    color: rgb(0, 48, 108)
+    //font-family: Roboto
+    font-size: 2rem
+    font-weight: 700
+    text-align: left
+
+  .map_container
+    width: 90vw
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    //justify-content: center
+
+    color: rgb(0, 48, 108)
+    font-size: 2rem
+    font-weight: 700
+    text-align: center
+
+    .map
+      width: 100%
+      min-height: 40vw
+      border-radius: 25px
+      background: rgb(79, 78, 78)
+
+
+  .attractions_container
+    width: 90vw
+    display: grid
+
+    gap: 40px
+
+    // GRID TEMPLATES
+    grid-template-columns: 1fr 1fr 1fr
+// ADD ADAPTIVE!!!!!! (maybe)
+
+
+.attraction
+  line-height: 0
+
+  width: 100%
+
+  background: rgb(242, 242, 242)
+  border-radius: 25px
+  overflow: hidden
+  display: flex
+  flex-direction: column
+
+  .image_conatiner
+    border: 2px solid white
+    border-radius: 25px
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgba(0, 0, 0, 0.2)
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  .info_container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    height: 50%
+    padding: 0 10px
+
+    #attraction_name
+      display: flex
+      justify-content: flex-start
+
+      color: rgb(88, 88, 88)
+
+      font-size: 30px
+      font-weight: 700
+      letter-spacing: 0px
+      text-align: left
+
+      width: 100%
+
+    .price_and_time_container
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+
+      .price_container
+        display: flex
+        flex-direction: column
+
+  .add_attraction
+    width: 100%
+    height: 40px
+
+    display: flex
+    justify-content: center
+    margin-bottom: 10px
+
+    button
+      border-radius: 25px
+      background: rgb(171, 202, 211)
+      width: 90%
+
+      border: none
+
+      font-size: 20px
+      color: rgb(27, 77, 88)
+      font-weight: 900
+      text-align: center
