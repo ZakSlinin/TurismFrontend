@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   color: rgb(0, 48, 108);
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-align: center;
 }
@@ -102,6 +102,9 @@
   color: rgb(27, 77, 88);
   font-weight: 900;
   text-align: center;
+}
+.attraction #attraction_id {
+  display: none;
 }
 
 /*# sourceMappingURL=attractions.css.map */

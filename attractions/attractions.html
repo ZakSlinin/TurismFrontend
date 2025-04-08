@@ -25,7 +25,7 @@
 </div>
 
 <template id="attraction_template">
-    <div class="attraction">
+    <div class="attraction" onclick="setPostData(event)">
         <span class="image_conatiner">
             <img id="attraction_image" src="../public/abc.png" alt="#">
         </span>
@@ -45,6 +45,7 @@
         <span class="add_attraction">
             <button>Добавить</button>
         </span>
+        <p id="attraction_id">0</p>
     </div>
 </template>
 
