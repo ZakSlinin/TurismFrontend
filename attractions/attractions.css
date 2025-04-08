@@ -33,7 +33,7 @@
   width: 90vw;
   display: grid;
   gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .attraction {
@@ -44,6 +44,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 .attraction .image_conatiner {
   border: 2px solid white;
@@ -97,6 +98,7 @@
   border-radius: 25px;
   background: rgb(171, 202, 211);
   width: 90%;
+  height: 40px;
   border: none;
   font-size: 20px;
   color: rgb(27, 77, 88);
@@ -105,6 +107,33 @@
 }
 .attraction #attraction_id {
   display: none;
+}
+
+.active_add_button {
+  background: rgb(171, 202, 211);
+  animation: change-animation 0.3s ease-in forwards;
+}
+
+@keyframes change-animation {
+  0% {
+    border-radius: 25px;
+    background: rgb(171, 202, 211);
+    width: 90%;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    background: rgb(42, 105, 119);
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=attractions.css.map */
