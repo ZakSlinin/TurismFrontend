@@ -1,14 +1,11 @@
-let id = ''
+let object_data = []
 
+// let tags_var = ['еда', 'не еда', 'другое']
 
-function onPageLoad() {
-    let ids = window.location.search
-    id = ids.split('=')[1]
+function setTag(template) {
+    template.innerHTML = tag_template
+    return template
 }
-
-onPageLoad()
-
-let tags_var = ['еда', 'не еда', 'другое']
 
 function setTagsToElement(tags) {
     const listData = document.querySelector('.object_tags')
@@ -24,6 +21,38 @@ function setTagsToElement(tags) {
     })
 }
 
-function setTags() {
-    setTagsToElement(tags_var)
+
+let idOfAttraction
+
+function changeButton(e) {
+    let sysData = document.querySelector('.add_object')
+
+    if (sysData.classList.contains('active_add_button')) {
+        sysData.classList.remove('active_add_button')
+        sysData.innerText = 'Добавить'
+
+        let currentStorage = String(localStorage.getItem('current_object')).split(',')
+        currentStorage.splice(currentStorage.indexOf(idOfAttraction), 1)
+        localStorage.setItem('current_object', currentStorage.join(','))
+    } else {
+        sysData.classList.add('active_add_button')
+        sysData.innerText = 'Убрать'
+
+        let currentStorage = String(localStorage.getItem('current_object')).split(',')
+        currentStorage.push(idOfAttraction)
+        localStorage.setItem('current_object', currentStorage.join(','))
+    }
+}
+
+function loadButtonState() {
+    let currentStorage = String(localStorage.getItem('current_object')).split(',')
+    let sysData = document.querySelector('.add_object')
+
+    if (currentStorage.includes(String(idOfAttraction))) {
+        sysData.innerText = 'Убрать'
+        sysData.classList.add('active_add_button')
+    } else {
+        sysData.innerText = 'Добавить'
+        sysData.classList.remove('active_add_button')
+    }
 }

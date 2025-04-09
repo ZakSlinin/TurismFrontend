@@ -1,12 +1,16 @@
+body
+  display: flex
+  justify-content: center
+
 .container
-  width: 100%
+  width: 90%
   display: flex
   flex-direction: column
   height: 100%
   align-items: center
   gap: 20px
 
-  line-height: 0
+  line-height: 1fr
 
   .naming_of_page
     color: rgb(0, 48, 108)
@@ -19,34 +23,46 @@
     display: flex
     flex-direction: column
     align-items: center
+    gap: 20px
 
     .object_photo_and_info
-      width: 100%
+      width: 90%
       display: grid
       grid-template-columns: 1fr 1fr
-      gap: 30px
+      gap: 20px
 
       .object_photo
         width: 100%
+        height: 100%
+        max-height: 350px
+        overflow: hidden
         border-radius: 25px
 
         img
           width: 100%
+          height: 100%
+          object-fit: contain
+          background: #5E6B82
 
       .object_info
-        display: flex
-        flex-direction: column
-        justify-content: space-between
+        display: grid
+        grid-template-rows: 3fr 1fr 1fr
+        line-height: 1.2rem
 
         #obj_name
-          font-size: 2.5rem
+          display: flex
+          height: 100%
+          line-break: anywhere
 
-        #obj_adress
-          font-size: 1.5rem
+    //#obj_adress
+    //  font-size: 1.5rem
 
     .object_description
-      width: 100%
-      line-break: strict
+      width: 80%
+      line-break: anywhere
+
+      &:first-letter
+        text-transform: uppercase
 
     .add_object
       border: none
@@ -60,7 +76,7 @@
       text-align: center
 
     .object_tags
-      width: 70%
+      width: 90%
       text-align: center
       border: 2px solid rgba(0, 0, 0, 0.25)
       background: #9aa4b6
@@ -70,12 +86,33 @@
       padding: 10px
 
       button
-        width: max-content
-        height: max-content
-        padding: 10px 30px
+        padding: 0 30px
         margin: 5px
         border-radius: 15px
         border: none
         outline: none
 
         font-size: 17px
+
+        p
+          line-height: 0
+
+
+.active_add_button
+  background: rgb(171, 202, 211)
+  animation: change-animation 0.3s ease-in forwards
+
+
+@keyframes change-animation
+  0%
+    background: rgb(171, 202, 211)
+    border: none
+    transform: scale(1)
+
+  50%
+    transform: scale(0.9)
+
+  100%
+    transform: scale(1)
+    background: rgb(42, 105, 119)
+    color: white

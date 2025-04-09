@@ -4,8 +4,8 @@ export class HTTP_client {
     constructor() {
         this.http = new HTTP_request()
 
-        this.link_to_change = '127.0.0.1:8001'
-        this.change_to = 'http://kringeproduction.ru'
+        this.link_to_change = 'http://127.0.0.1:8000'
+        this.change_to = 'http://kringeproduction.ru/files'
 
         this.attractionAPI = 'http://kringeproduction.ru/attractions/api/'
         this.objectAPI = 'http://kringeproduction.ru/objects/api/?tags=NaN'
@@ -37,13 +37,17 @@ export class HTTP_client {
             "time": time
         })
 
-        this.http.post(this.link_to_change, form, {
+        return await this.http.post(this.link_to_change, form, {
             'Content-Type': 'application/json',
         })
     }
 
     async getAttractions(...tags) {
         return await this.http.get(`${this.attractionAPI}?tags=${this.tagsParser(...tags)}`)
+    }
+
+    async getSelfAttraction(id) {
+        return await this.http.get(`${this.attractionAPI}${id}/`)
     }
 
     async searchAttractionsByName(name, ...tags) {
@@ -56,6 +60,10 @@ export class HTTP_client {
 
     async getObject(...tags) {
         return await this.http.get(`${this.objectAPI}?tags=${this.tagsParser(...tags)}`)
+    }
+
+    async getSelfObjectData(id) {
+        return await this.http.get(`${this.objectAPI}${id}/`)
     }
 
     fileParser(link) {
