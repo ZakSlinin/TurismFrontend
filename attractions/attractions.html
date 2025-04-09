@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="attractions.css">
     <script src="../Templates/attraction.js"></script>
     <script src="objects_request.js" type="module"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_UA&apikey=97ef513c-e805-4a4e-ae45-93bd71395f5f" type="text/javascript"></script>
+    <script>
+        import config from "../config";
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_UA&apikey=config.apiKey" type="text/javascript"></script>
     <script type="text/javascript" src="map/yandex_map.js"></script>
 </head>
 <body>
