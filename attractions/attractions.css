@@ -1,3 +1,7 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -26,8 +30,10 @@
 .container .map_container .map {
   width: 100%;
   min-height: 40vw;
-  border-radius: 25px;
   background: rgb(79, 78, 78);
+  object-fit: cover;
+  padding: 15px;
+  overflow: hidden;
 }
 .container .attractions_container {
   width: 90vw;
@@ -58,8 +64,7 @@
 .attraction .image_conatiner img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .attraction .info_container {
   display: grid;
@@ -139,4 +144,6 @@
   .attractions_container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}/*# sourceMappingURL=attractions.css.map */
+}
+
+/*# sourceMappingURL=attractions.css.map */
