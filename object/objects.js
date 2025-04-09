@@ -53,8 +53,6 @@ function attraction_template_spawner(templateData) {
     item.querySelector('#object_name').innerText = templateData.name
     setTagsToTemplate(templateData["tags"], item)
 
-    console.log(item)
-
     // TODO
     //  add Images
 
@@ -96,10 +94,10 @@ setTags('.tags')
 function loadTags() {
     let tags = document.querySelector('.tags')
 
-    localStorage.setItem('current_attractions', 'null')
+    // localStorage.setItem('current_attractions', 'null')
 
     if (String(localStorage.getItem('current_tags')) === 'null' ||
-        String(localStorage.getItem('current_tags')) === undefined ||
+        String(localStorage.getItem('current_tags')) === 'undefined' ||
         String(localStorage.getItem('current_tags')) === ''
     ) {
         localStorage.setItem('current_tags', [])

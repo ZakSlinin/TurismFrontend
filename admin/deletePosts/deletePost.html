@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeletePost</title>
+    <link rel="stylesheet" href="deletePost.css">
+</head>
+<body>
+
+<div class="form">
+    <span class="nav">
+        <button id="objects_obj" class="active">Объекты</button>
+        <button id="objects_attractions">Достопримечательности</button>
+    </span>
+
+    <br>
+
+    <div class="objects_container">
+
+    </div>
+
+</div>
+
+<template id="object_template">
+    <div class="object_container">
+        <span class="image_conatiner">
+            <img id="object_image" src="#" alt="#">
+        </span>
+        <span class="info_container">
+            <h3 id="object_name">Название</h3>
+        </span>
+        <span class="delete_container">
+            <button class="delete_button">Удалить</button>
+        </span>
+        <p id="object_id">0</p>
+    </div>
+</template>
+
+<script src="buttonsStyles.js"></script>
+<script src="deletePost.js" type="module"></script>
+</body>
+</html>

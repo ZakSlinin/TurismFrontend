@@ -1,0 +1,40 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  align-items: center;
+  gap: 20px;
+}
+.container .naming_of_page {
+  color: rgb(0, 48, 108);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+.container .nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 40%;
+}
+.container .iframe_container {
+  width: 100%;
+  height: 100%;
+}
+.container .iframe_container iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание поста</title>
+    <link rel="stylesheet" href="createPost.css">
+    <script src="../../Templates/tags.js"></script>
+    <script src="popup.js" type="module"></script>
+</head>
+<body>
+<div class="form">
+    <span class="postName_container">
+        <label for="name_of_post">Название точки:</label>
+        <input id="name_of_post" name="postName">
+    </span>
+
+    <span class="postImage_container">
+        <label for="image_of_post">Картинка:</label>
+        <input id="image_of_post" type="file" name="postImage">
+    </span>
+
+    <span class="address_container">
+        <label for="address_of_post">Адрес точки</label>
+        <input id="address_of_post" name="postAddress">
+    </span>
+
+    <span class="postPrice_container">
+        <label for="price_of_post">Цена точки:</label>
+        <input id="price_of_post" name="postPrice">
+    </span>
+
+    <span class="description_container">
+        <label for="description_of_post">Описание точки:</label>
+        <textarea id="description_of_post" name="postDescription"></textarea>
+    </span>
+
+    <div class="map_container">
+        <h3>Выберите вашу точку на карте</h3>
+        <span class="map_data">
+            <div class="map" id="map"></div>
+        </span>
+    </div>
+
+    <select class="selectorOfType">
+        <option>Объекты</option>
+        <option>Достопримечательности</option>
+    </select>
+
+    <div id="tags_container" class="tags_container">
+        <h3>Выберите теги</h3>
+        <div class="tags">
+
+        </div>
+    </div>
+
+    <button class="create">Создать</button>
+</div>
+
+<div class="popup" id="testPopup">
+    <h1>Popup</h1>
+    <h3>Ошибка при создании точки</h3>
+    <button id="closePopupButton">Close</button>
+</div>
+
+<script src="createPost.js" type="module"></script>
+<script src="tagCreator.js"></script>
+</body>
+</html>

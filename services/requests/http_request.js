@@ -54,4 +54,21 @@ export class HTTP_request {
             return Promise.reject(new Error(error.message))
         }
     }
+    async delete(url, headers) {
+        try {
+            const response = await fetch(url, {
+                method: 'DELETE',
+                headers: headers,
+            })
+
+            if (!response.ok) {
+                return Promise.reject(response)
+            }
+
+            const data = await response.json()
+            return data
+        } catch (error) {
+            return Promise.reject(new Error(error.message))
+        }
+    }
 }
