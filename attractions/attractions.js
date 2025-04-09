@@ -1,7 +1,6 @@
 let attractionsArray = []
 let currentAttractions = 0
 
-
 function setTemplates(template) {
     template.innerHTML = attract
     return template
@@ -19,6 +18,9 @@ function attraction_template_spawner(templateData) {
     item.querySelector('#attraction_adress').innerText = templateData.address
     item.querySelector('#attraction_price').innerText = templateData.price + 'Р'
     item.querySelector('#attraction_time').innerText = String(templateData.time).split(' ')[0]
+
+    // TODO
+    //  IMAGES add
 
     list.append(item)
     currentAttractions += 1
@@ -67,7 +69,6 @@ function changeButton(e) {
 
         let currentStorage = String(localStorage.getItem('current_attractions')).split(',')
         currentStorage.splice(currentStorage.indexOf(idOfAttraction), 1)
-        console.log(currentStorage)
         localStorage.setItem('current_attractions', currentStorage.join(','))
     } else {
         sysData.classList.add('active_add_button')
@@ -75,7 +76,6 @@ function changeButton(e) {
 
         let currentStorage = String(localStorage.getItem('current_attractions')).split(',')
         currentStorage.push(idOfAttraction)
-        console.log(currentStorage)
         localStorage.setItem('current_attractions', currentStorage.join(','))
     }
 }

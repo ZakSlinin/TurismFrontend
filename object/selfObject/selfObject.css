@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
+  line-height: 0;
+}
+.container .naming_of_page {
+  color: rgb(0, 48, 108);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+.container .object_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .object_container .object_photo_and_info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.container .object_container .object_photo_and_info .object_photo {
+  width: 100%;
+  border-radius: 25px;
+}
+.container .object_container .object_photo_and_info .object_photo img {
+  width: 100%;
+}
+.container .object_container .object_photo_and_info .object_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .object_container .object_photo_and_info .object_info #obj_name {
+  font-size: 2.5rem;
+}
+.container .object_container .object_photo_and_info .object_info #obj_adress {
+  font-size: 1.5rem;
+}
+.container .object_container .object_description {
+  width: 100%;
+  line-break: strict;
+}
+.container .object_container .add_object {
+  border: none;
+  border-radius: 25px;
+  background: rgb(94, 107, 130);
+  width: 40%;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-align: center;
+}
+.container .object_container .object_tags {
+  width: 70%;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  background: #9aa4b6;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  gap: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container .object_container .object_tags button {
+  width: max-content;
+  height: max-content;
+  padding: 10px 30px;
+  margin: 5px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}
+
+/*# sourceMappingURL=selfObject.css.map */
