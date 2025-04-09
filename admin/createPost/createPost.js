@@ -1,5 +1,7 @@
 import {HTTP_client} from "../../services/http_client/http_client.js"
 
+import createPostMap from "map/yandex_map"
+
 let selOfType = document.querySelector('.selectorOfType')
 
 document.querySelector('.selectorOfType').addEventListener('input', (e) => {
@@ -13,6 +15,7 @@ function select_changed(e) {
         document.querySelector('.tags_container').style.display = 'grid'
     }
 }
+
 
 document.querySelector('.create').addEventListener('click', (e) => {
     createNewObject()
@@ -36,10 +39,13 @@ function createNewObject() {
     let price = document.querySelector('#price_of_post').value
     let description = document.querySelector('#description_of_post').value
 
-    // TODO
-    //  MAP
+    let mapState = {
+        center: createPostMap.center,
+        zoom: createPostMap.zoom,
+        points: createPostMap.points,
+    };
 
-    let map = JSON.stringify({})
+    let map = JSON.stringify({'map': mapState})
 
     if (selOfType.value === 'Объекты') {
         createObject(name, address, description, map, image, price)
