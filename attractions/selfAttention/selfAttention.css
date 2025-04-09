@@ -1,11 +1,15 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   height: 100%;
   align-items: center;
   gap: 20px;
-  line-height: 0;
 }
 .container .naming_of_page {
   color: rgb(0, 48, 108);
@@ -18,34 +22,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 .container .attention_container .attention_photo_and_info {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  height: 100%;
+  gap: 20px;
 }
 .container .attention_container .attention_photo_and_info .attention_photo {
   width: 100%;
   border-radius: 25px;
+  height: 100%;
+  max-height: 350px;
+  overflow: hidden;
 }
-.container .attention_container .attention_photo_and_info .attention_photo img {
+.container .attention_container .attention_photo_and_info img {
+  height: 100%;
   width: 100%;
+  object-fit: contain;
+  background: #5E6B82;
 }
 .container .attention_container .attention_photo_and_info .attention_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  line-height: 1.2rem;
 }
 .container .attention_container .attention_photo_and_info .attention_info #att_name {
-  font-size: 2.5rem;
+  display: flex;
+  height: 100%;
+  line-break: anywhere;
 }
-.container .attention_container .attention_photo_and_info .attention_info #att_adress {
-  font-size: 1.5rem;
+.container .attention_container .attention_photo_and_info .attention_info #att_adress, .container .attention_container .attention_photo_and_info .attention_info att_price {
+  line-height: 0;
 }
 .container .attention_container .attention_description {
-  width: 100%;
-  line-break: strict;
+  width: 80%;
+  min-height: 70px;
+  line-break: anywhere;
+  margin-top: 50px;
+}
+.container .attention_container .attention_description::first-letter {
+  text-transform: uppercase;
 }
 .container .attention_container .add_attraction {
   border: none;
@@ -56,4 +75,27 @@
   color: rgb(255, 255, 255);
   font-weight: 500;
   text-align: center;
-}/*# sourceMappingURL=selfAttention.css.map */
+}
+
+.active_add_button {
+  background: rgb(171, 202, 211);
+  animation: change-animation 0.3s ease-in forwards;
+}
+
+@keyframes change-animation {
+  0% {
+    background: rgb(171, 202, 211);
+    border: none;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    background: rgb(42, 105, 119);
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=selfAttention.css.map */

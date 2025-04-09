@@ -1,14 +1,18 @@
 *
   font-family: "Roboto", sans-serif
 
+body
+  display: flex
+  justify-content: center
+
+
 .container
-  width: 100%
+  width: 80%
   display: flex
   flex-direction: column
   height: 100%
   align-items: center
   gap: 20px
-  line-height: 0
 
   .naming_of_page
     color: rgb(0, 48, 108)
@@ -18,40 +22,45 @@
     text-align: left
 
   .map_container
-    width: 90vw
+    width: 90%
 
     display: flex
     flex-direction: column
     align-items: center
-    //justify-content: center
+    justify-content: center
     color: rgb(0, 48, 108)
     font-size: 1.3rem
     font-weight: 700
     text-align: center
+    height: 100%
 
-    .map
+    .map_data
       width: 100%
-      min-height: 40vw
       background: rgb(79, 78, 78)
-      object-fit: cover
-      padding: 15px
-      overflow: hidden
+      padding: 20px
+      border-radius: 20px
+
+      .map
+        width: 100%
+        min-height: 40vh
+        object-fit: cover
 
 
   .attractions_container
-    width: 90vw
+    width: 90%
     display: grid
 
-    gap: 40px
+    gap: 50px
 
     // GRID TEMPLATES
     grid-template-columns: 1fr 1fr 1fr
 // ADD ADAPTIVE!!!!!! (maybe)
 
 .attraction
-  line-height: 0
+  line-height: 1rem
 
   width: 100%
+  height: 100%
 
   background: rgb(242, 242, 242)
   border-radius: 25px
@@ -68,11 +77,20 @@
     justify-content: center
     align-items: center
     background: rgba(0, 0, 0, 0.2)
+    height: 100%
+    max-height: 150px
+    overflow: hidden
 
     img
       width: 100%
       height: 100%
       object-fit: cover
+      border-radius: 25px
+      transition: transform 0.7s ease-in-out
+
+    &:hover
+      img
+        transform: scale(1.1)
 
   .info_container
     display: grid
@@ -86,12 +104,13 @@
 
       color: rgb(88, 88, 88)
 
-      font-size: 130%
+      font-size: 110%
       font-weight: 700
       letter-spacing: 0px
       text-align: left
 
       width: 100%
+      height: 150%
 
     .price_and_time_container
       width: 100%
@@ -113,7 +132,8 @@
 
     button
       border-radius: 25px
-      background: rgb(171, 202, 211)
+      background: rgba(171, 202, 211, 1)
+
       width: 90%
       height: 40px
 
@@ -130,6 +150,7 @@
 .active_add_button
   background: rgb(171, 202, 211)
   animation: change-animation 0.3s ease-in forwards
+
 
 @keyframes change-animation
   0%
@@ -154,6 +175,6 @@
     color: white
 
 
-@media (max-width: 1024px)
+@media screen and (max-width: 500px)
   .attractions_container
     grid-template-columns: 1fr 1fr 1fr

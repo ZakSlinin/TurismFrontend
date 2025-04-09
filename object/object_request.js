@@ -13,12 +13,18 @@ let http = new HTTP_client()
 function getObjects() {
     http.getObject()
         .then((data) => {
-            objectsArray = data
-            console.log(data)
+            let outputData = []
+            data.forEach(attraction => {
+                try {
+                    attraction.image = http.fileParser(attraction.image)
+                    outputData.push(attraction)
+                } catch (e) {
+                    console.error(e)
+                }
+            })
 
+            objectsArray = outputData
             starterObjects()
-            // attraction_template_spawner(attractionsArray[0])
-            // attraction_template_spawner(attractionsArray[1])
         })
         .catch((error) => {
             console.error(error)

@@ -1,0 +1,27 @@
+.active_button {
+  background: rgb(94, 107, 130);
+  animation: change-animation 0.3s ease-in forwards;
+}
+
+@keyframes show-button {
+  0% {
+    border: none;
+    border-radius: 25px;
+    background: rgb(94, 107, 130);
+    width: 40%;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: center;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    background: rgb(42, 105, 119);
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=button%20animation.css.map */

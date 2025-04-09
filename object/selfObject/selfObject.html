@@ -13,26 +13,31 @@
         </span>
 
     <div class="object_container">
-            <span class="object_photo_and_info">
-                <span class="object_photo">
-                    <img src="../../public/Kjuj%20так%20сказать.jpg" alt="#">
-                </span>
-                <span class="object_info">
-                    <h3 id="obj_name">Название</h3>
-                    <h3 id="obj_adress">Адрес</h3>
-                    <h3 id="obj_price">Цена</h3>
-                </span>
+        <span class="object_photo_and_info">
+            <span class="object_photo">
+                <img id="object_image" src="../../public/Kjuj%20так%20сказать.jpg" alt="#">
             </span>
+            <span class="object_info">
+                <h3 id="obj_name">Название</h3>
+                <h3 id="obj_adress">Адрес</h3>
+                <h3 id="obj_price">Цена</h3>
+            </span>
+        </span>
         <span class="object_tags">
 
         </span>
         <span class="object_description">
-                <p>###</p>
+            <p id="object_description_string">###</p>
         </span>
-        <button class="add_object">Добавить</button>
+        <button class="add_object" onclick="changeButton(event)">Добавить</button>
     </div>
 </div>
 
+<template id="tag_template">
+    <p id="tag_name"></p>
+</template>
+
+<script src="request_self_object.js" type="module"></script>
 <script src="selfObject.js"></script>
 </body>
 </html>
