@@ -8,7 +8,8 @@ export class HTTP_client {
         this.change_to = 'http://kringeproduction.ru'
 
         this.attractionAPI = 'http://kringeproduction.ru/attractions/api/'
-        this.objectAPI = 'http://kringeproduction.ru/objects/api/'
+        this.objectAPI = 'http://kringeproduction.ru/objects/api/?tags=NaN'
+        this.compilationsApi = 'http://kringeproduction.ru/compilations/api/'
         this.files = '/files/images/5000.jpg'
     }
 
@@ -60,6 +61,10 @@ export class HTTP_client {
     fileParser(link) {
         link = link.replace(this.link_to_change, this.change_to)
         return link
+    }
+
+    async getCollections() {
+        return await this.http.get(this.compilationsApi)
     }
 
 }

@@ -4,6 +4,7 @@ function init() {
     var myMap = new ymaps.Map("map", {
         center: [56.326797, 44.006516],
         zoom: 10,
+        controls: [],
     });
 
     // Нижегородский Кремль
