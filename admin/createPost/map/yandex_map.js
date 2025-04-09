@@ -15,6 +15,9 @@ function init() {
 
         var title = prompt("Введите название метки:", "Название метки");
 
+        if (title === null) {
+            return
+        }
 
         var placemark = new ymaps.Placemark(coords, {
             balloonContent: title
