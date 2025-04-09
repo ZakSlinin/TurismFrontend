@@ -5,8 +5,11 @@ export class HTTP_client {
         this.http = new HTTP_request()
 
         this.link_to_change = '127.0.0.1:8001'
+        this.change_to = 'http://kringeproduction.ru'
 
         this.attractionAPI = 'http://kringeproduction.ru/attractions/api/'
+        this.objectAPI = 'http://kringeproduction.ru/objects/api/'
+        this.files = '/files/images/5000.jpg'
     }
 
 
@@ -48,6 +51,15 @@ export class HTTP_client {
         } else {
             return await this.http.get(`${this.attractionAPI}?tags=${this.tagsParser(...tags)}&name=${name}`)
         }
+    }
+
+    async getObject(...tags) {
+        return await this.http.get(`${this.objectAPI}?tags=${this.tagsParser(...tags)}`)
+    }
+
+    fileParser(link) {
+        link = link.replace(this.link_to_change, this.change_to)
+        return link
     }
 
 }
