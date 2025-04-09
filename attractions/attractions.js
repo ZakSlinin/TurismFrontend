@@ -1,3 +1,7 @@
+let attractionsArray = []
+let currentAttractions = 0
+
+
 function setTemplates(template) {
     template.innerHTML = attract
     return template
@@ -10,24 +14,34 @@ function attraction_template_spawner(templateData) {
 
     const item = template.content.cloneNode(true)
 
-    item.querySelector('#attraction_id').innerText = 0
+    item.querySelector('#attraction_id').innerText = templateData.id
+    item.querySelector('#attraction_name').innerText = templateData.name
+    item.querySelector('#attraction_adress').innerText = templateData.address
+    item.querySelector('#attraction_price').innerText = templateData.price + 'Р'
+    item.querySelector('#attraction_time').innerText = String(templateData.time).split(' ')[0]
 
     list.append(item)
+    currentAttractions += 1
 }
 
-attraction_template_spawner(null)
-attraction_template_spawner(null)
-
-window.onscroll = function (e) {
-    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
-        attraction_template_spawner(null)
-        attraction_template_spawner(null)
+function starterAttractions() {
+    while (currentAttractions < 4) {
+        attraction_template_spawner(attractionsArray[currentAttractions])
     }
 }
 
+function checkAttraction_isCanBeCreated() {
+    if (currentAttractions <= attractionsArray.length) {
+        attraction_template_spawner(attractionsArray[currentAttractions])
+    }
+}
 
-localStorage.setItem('current_attractions', [])
-
+window.onscroll = function (e) {
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
+        checkAttraction_isCanBeCreated()
+        checkAttraction_isCanBeCreated()
+    }
+}
 
 function setPostData(event) {
     let attractionContainer = event.target.closest('.attraction')
@@ -39,6 +53,8 @@ function setPostData(event) {
     }
 }
 
+
+localStorage.setItem('current_attractions', [])
 
 function changeButton(e) {
     let attractionContainer = event.target.closest('.attraction')

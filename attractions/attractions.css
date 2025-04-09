@@ -33,7 +33,7 @@
   width: 90vw;
   display: grid;
   gap: 40px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .attraction {
@@ -61,9 +61,8 @@
   object-fit: cover;
 }
 .attraction .info_container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: 3fr 2fr;
   height: 50%;
   padding: 0 10px;
 }
@@ -71,7 +70,7 @@
   display: flex;
   justify-content: flex-start;
   color: rgb(88, 88, 88);
-  font-size: 30px;
+  font-size: 130%;
   font-weight: 700;
   letter-spacing: 0px;
   text-align: left;
@@ -133,6 +132,11 @@
     transform: scale(1);
     background: rgb(42, 105, 119);
     color: white;
+  }
+}
+@media (max-width: 1024px) {
+  .attractions_container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
