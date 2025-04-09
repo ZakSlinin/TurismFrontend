@@ -134,5 +134,10 @@
     color: white;
   }
 }
+@media (max-width: 1024px) {
+  .attractions_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 /*# sourceMappingURL=attractions.css.map */
