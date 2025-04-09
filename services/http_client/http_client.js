@@ -76,4 +76,12 @@ export class HTTP_client {
         return await this.http.get(this.compilationsApi)
     }
 
+    async delObject(id) {
+        return await this.http.delete(`${this.objectAPI}${id}/`)
+    }
+
+    async delAttraction(id) {
+        return await this.http.delete(`${this.attractionAPI}${id}/`)
+    }
+
 }
