@@ -4,15 +4,47 @@ let tag_template = `
     </button>
 `
 
-function setTags(element, ...maxValues) {
-    let tags = ['еда', 'музеи', 'на улице', 'религия']
+let tagsArr = ['еда', 'музеи', 'на улице', 'религия']
 
-    tags.forEach(tag => {
+function setTags(element) {
+    tagsArr.forEach(tag => {
         let tagElement = `<button class="${tag}" onclick="changeTagStatus(event)">${tag}</button>`
 
         document.querySelector(element).innerHTML += tagElement
     })
+}
 
+function setTagsToCreatePage(element) {
+    tagsArr.forEach(tag => {
+        let tagElement = `<button class="${tag}" onclick="changeCreatePageStatus(event)">${tag}</button>`
+        document.querySelector(element).innerHTML += tagElement
+    })
+}
+
+
+let forCreatingArr = []
+
+function getCreatingArr() {
+    return forCreatingArr
+}
+
+function changeCreatePageStatus(e) {
+    let attractionContainer = event.target.closest("button")
+
+    let sysData = attractionContainer.innerText
+
+    if (attractionContainer.classList.contains('active')) {
+        attractionContainer.classList.remove('active')
+
+        let currentStorage = forCreatingArr
+        forCreatingArr = currentStorage.splice(currentStorage.indexOf(sysData), 1)
+    } else {
+        attractionContainer.classList.add('active')
+
+        let currentStorage = forCreatingArr
+        currentStorage.push(sysData)
+        forCreatingArr = currentStorage
+    }
 }
 
 

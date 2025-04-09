@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
   justify-content: center;
@@ -53,6 +54,9 @@ body {
   display: flex;
   height: 100%;
   line-break: anywhere;
+}
+.container .object_container .object_photo_and_info .object_info #obj_price::after {
+  content: "Р";
 }
 .container .object_container .object_description {
   width: 80%;

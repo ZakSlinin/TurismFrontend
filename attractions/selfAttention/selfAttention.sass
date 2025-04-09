@@ -53,8 +53,14 @@ body
           height: 100%
           line-break: anywhere
 
-        #att_adress, att_price
+        #att_adress, #att_price
           line-height: 0
+
+        #att_price
+          &::after
+            content: "Р"
+
+
     //font-size: 1.5rem
 
     .attention_description

@@ -54,7 +54,7 @@ body
 
     // GRID TEMPLATES
     grid-template-columns: 1fr 1fr 1fr
-// ADD ADAPTIVE!!!!!! (maybe)
+    // ADD ADAPTIVE!!!!!! (maybe)
 
 .attraction
   line-height: 1rem
@@ -121,6 +121,9 @@ body
       .price_container
         display: flex
         flex-direction: column
+        &::after
+          content: "Р"
+
 
   .add_attraction
     width: 100%

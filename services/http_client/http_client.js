@@ -8,8 +8,9 @@ export class HTTP_client {
         this.change_to = 'http://kringeproduction.ru/files'
 
         this.attractionAPI = 'http://kringeproduction.ru/attractions/api/'
-        this.objectAPI = 'http://kringeproduction.ru/objects/api/?tags=NaN'
+        this.objectAPI = 'http://kringeproduction.ru/objects/api/'
         this.compilationsApi = 'http://kringeproduction.ru/compilations/api/'
+
         this.files = '/files/images/5000.jpg'
     }
 
@@ -40,10 +41,6 @@ export class HTTP_client {
         return await this.http.post(this.link_to_change, form, {
             'Content-Type': 'application/json',
         })
-    }
-
-    async getByURL(url) {
-        return await this.http.get(url)
     }
 
     async getAttractions(...tags) {
@@ -78,4 +75,5 @@ export class HTTP_client {
     async getCollections() {
         return await this.http.get(this.compilationsApi)
     }
+
 }
