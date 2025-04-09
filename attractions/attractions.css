@@ -33,7 +33,7 @@
   width: 90vw;
   display: grid;
   gap: 40px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .attraction {
@@ -132,6 +132,11 @@
     transform: scale(1);
     background: rgb(42, 105, 119);
     color: white;
+  }
+}
+@media (max-width: 1024px) {
+  .attractions_container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
