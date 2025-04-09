@@ -67,6 +67,7 @@ function createObject(name, address, description, map, image, price) {
     http.postObjects(formData)
         .then((data) => {
             console.log(data)
+            window.location.reload()
         })
 }
 
@@ -87,5 +88,6 @@ function createAttraction(name, address, description, map, image, price) {
     http.postAttractions(formData)
         .then((data) => {
             console.log(data)
+            window.location.reload()
         })
 }
