@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>Объект</title>
 
-    <link rel="stylesheet" href="../static/sass/style.css">
+    <link rel="stylesheet" href="compilation.css">
     <script src="compilations_request.js" type="module"></script>
 </head>
 <body>
 
 <div class="container">
+    <div class="title">
+        <h2>Ваша подборка</h2>
+        <button onclick="cleaner(event)">Удалить</button>
+    </div>
     <div class="attractions_div">
 
     </div>
@@ -29,5 +33,11 @@
     </div>
 </template>
 
+<script>
+    function cleaner(event) {
+        localStorage.clear()
+        window.location = '../index.html'
+    }
+</script>
 </body>
 </html>

@@ -9,7 +9,6 @@
 import {HTTP_client} from "../services/http_client/http_client.js"
 
 let http = new HTTP_client()
-let output = []
 
 function setHTML(item, templateData, type) {
     item.querySelector('#object_id').innerText = templateData.id
@@ -17,28 +16,18 @@ function setHTML(item, templateData, type) {
     item.querySelector('#object_name').innerText = templateData.name
     item.querySelector('#object_image').src = String(templateData.image)
 
-    item.querySelector('.delete_button').addEventListener('click', (e) => {
-        if (type === 'obj') {
-            let currentStorage = String(localStorage.getItem('current_object')).split(',')
-            currentStorage.splice(currentStorage.indexOf(templateData.id), 1)
-            localStorage.setItem('current_object', currentStorage.join(','))
-        } else {
-            let currentStorage = String(localStorage.getItem('current_attractions')).split(',')
-            currentStorage.splice(currentStorage.indexOf(templateData.id), 1)
-            localStorage.setItem('current_attractions', currentStorage.join(','))
-        }
-    })
-
     return item
 }
 
 function newElementByTemplate(data, type) {
-    const list = document.querySelector('.objects_container')
+    const list = document.querySelector('.attractions_div')
     let template = document.querySelector('#object_template')
 
     let item = template.content.cloneNode(true)
 
     item = setHTML(item, data, type)
+
+    console.log(item)
 
     list.append(item)
 }
