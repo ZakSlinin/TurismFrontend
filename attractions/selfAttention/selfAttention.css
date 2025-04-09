@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
   justify-content: center;
@@ -54,8 +55,11 @@ body {
   height: 100%;
   line-break: anywhere;
 }
-.container .attention_container .attention_photo_and_info .attention_info #att_adress, .container .attention_container .attention_photo_and_info .attention_info att_price {
+.container .attention_container .attention_photo_and_info .attention_info #att_adress, .container .attention_container .attention_photo_and_info .attention_info #att_price {
   line-height: 0;
+}
+.container .attention_container .attention_photo_and_info .attention_info #att_price::after {
+  content: "Р";
 }
 .container .attention_container .attention_description {
   width: 80%;

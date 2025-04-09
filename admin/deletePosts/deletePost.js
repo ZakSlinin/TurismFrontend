@@ -37,6 +37,7 @@ function setHTML(item, templateData) {
     item.querySelector('#object_image').src = String(templateData.image)
 
     item.querySelector('.delete_button').addEventListener('click', (e) => {
+        console.log(e.target, templateData.id)
         deleteRequest(e, templateData.id)
     })
 
