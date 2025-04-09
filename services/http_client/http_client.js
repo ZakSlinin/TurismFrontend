@@ -42,6 +42,10 @@ export class HTTP_client {
         })
     }
 
+    async getByURL(url) {
+        return await this.http.get(url)
+    }
+
     async getAttractions(...tags) {
         return await this.http.get(`${this.attractionAPI}?tags=${this.tagsParser(...tags)}`)
     }
@@ -74,5 +78,4 @@ export class HTTP_client {
     async getCollections() {
         return await this.http.get(this.compilationsApi)
     }
-
 }
