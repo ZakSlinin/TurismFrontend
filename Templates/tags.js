@@ -8,8 +8,7 @@ let tagsArr = ['еда', 'музеи', 'на улице', 'религия']
 
 function setTags(element) {
     tagsArr.forEach(tag => {
-        let tagElement = `<button class="${tag}" onclick="changeTagStatus(event)">${tag}</button>`
-
+        let tagElement = `<button class="${tag} tag" onclick="changeTagStatus(event)">${tag}</button>`
         document.querySelector(element).innerHTML += tagElement
     })
 }

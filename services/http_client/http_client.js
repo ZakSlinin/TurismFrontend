@@ -83,5 +83,4 @@ export class HTTP_client {
     async delAttraction(id) {
         return await this.http.delete(`${this.attractionAPI}${id}/`)
     }
-
 }

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Объект</title>
+    <meta charset="UTF-8">
+    <title>Объект</title>
 
-  <link rel="stylesheet" href="../static/sass/style.css">
-  <script src="compilations_request.js" type="module"></script>
-  <script src="../Templates/compilation.js"></script>
+    <link rel="stylesheet" href="../static/sass/style.css">
+    <script src="compilations_request.js" type="module"></script>
 </head>
 <body>
-<header>
 
-</header>
-<main>
-  <div class="attractions_div">
-    <div class="attractions_text_div">
-      <h1 class="attractions_text">Имя подборки</h1>
+<div class="container">
+    <div class="attractions_div">
+
     </div>
-    <div class="collections_img">
-      <div class="first_time_in_city_collection">
-        <img src="../static/img/nn_kreml_photo.jpg" alt="nn_kreml_photo" class="nn_kreml_photo">
-        <h3 class="card_text">П</h3>
-      </div>
+</div>
+
+<template id="object_template">
+    <div class="object_container">
+        <span class="image_conatiner">
+            <img id="object_image" src="#" alt="#">
+        </span>
+        <span class="info_container">
+            <h3 id="object_name">Название</h3>
+        </span>
+
+        <p id="object_id">0</p>
+        <p id="object_type">obj</p>
     </div>
-  </div>
-</main>
-<script src="compilation.js"></script>
+</template>
+
 </body>
 </html>

@@ -47,6 +47,10 @@ main {
   flex-direction: column;
   align-items: center;
 }
+main #user_collection {
+  width: 100%;
+  display: flex;
+}
 main .main_page_collections_div {
   display: flex;
   flex-direction: column;
