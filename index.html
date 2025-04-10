@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="static/sass/style.css">
-    <script src="compilation/compilation.js"></script>
-    <script src="compilation/compilations_request.js" type="module"></script>
+
 </head>
 <body>
-    <header>
-        <img src="static/img/main_page_logo.svg" alt="main_page_logo" class="main_page_logo">
-        <div class="text_about_city_div"><h3 class="text_about_city">ГОРОД, В КОТОРОМ ЧУВСТВУЕШЬ ЖИЗНЬ</h3></div>
-    </header>
+<header>
+    <img src="static/img/main_logo.svg" alt="main_page_logo" class="main_page_logo">
+    <div class="text_about_city_div"><h3 class="text_about_city">ГОРОД, В КОТОРОМ ЧУВСТВУЕШЬ ЖИЗНЬ</h3></div>
+</header>
+<div class="page_container">
     <main>
         <div class="attractions_div">
             <div class="attractions_text_div">
-                <h1 class="attractions_text" id="attractions_text_id">Подборки</h1>
+                <h1 class="attractions_text">Подборки авторов</h1>
             </div>
             <div class="collections_img">
                 <div class="first_time_in_city_collection">
-                    <img id="compilation_image">
-                    <h3 class="card_text" id="compilation_name"></h3>
-                </div>
-                <div class="more_collections">
-                    <h1 class="more_collections_text">Больше подборок</h1>
+                    <img src="static/img/nn_kreml_photo.jpg" alt="nn_kreml_photo" class="nn_kreml_photo" id="collection_img_id">
+                    <h3 class="card_text">Первый раз в городе</h3>
                 </div>
             </div>
         </div>
@@ -33,11 +30,11 @@
             </div>
             <div class="collections_img">
                 <div class="first_time_in_city_collection">
-                    <img src="static/img/nn_kreml_photo.jpg" alt="nn_kreml_photo" class="nn_kreml_photo">
-                    <h3 class="card_text">Первый раз в городе</h3>
+                    <img src="static/img/Yarmarka.jpg" alt="nn_kreml_photo" class="nn_kreml_photo" id="attractions_img_id">
+                    <h3 class="card_text">Нижегородская ярмарка</h3>
                 </div>
                 <div class="more_collections">
-                    <h1 class="more_collections_text">Больше</h1>
+                    <h1 class="more_collections_text" id="more_compilation">Больше</h1>
                 </div>
             </div>
         </div>
@@ -47,29 +44,17 @@
             </div>
             <div class="collections_img">
                 <div class="first_time_in_city_collection">
-                    <img src="static/img/nn_kreml_photo.jpg" alt="nn_kreml_photo" class="nn_kreml_photo">
-                    <h3 class="card_text">Первый раз в городе</h3>
+                    <img src="static/img/chkalov.jpg" alt="nn_kreml_photo" class="nn_kreml_photo" id="objects_img_id">
+                    <h3 class="card_text">Чкаловская лестница</h3>
                 </div>
                 <div class="more_collections">
-                    <h1 class="more_collections_text">Больше</h1>
-                </div>
-            </div>
-        </div>
-        <div class="attractions_div">
-            <div class="attractions_text_div">
-                <h1 class="attractions_text">Еда</h1>
-            </div>
-            <div class="collections_img">
-                <div class="first_time_in_city_collection">
-                    <img src="static/img/nn_kreml_photo.jpg" alt="nn_kreml_photo" class="nn_kreml_photo">
-                    <h3 class="card_text">Первый раз в городе</h3>
-                </div>
-                <div class="more_collections">
-                    <h1 class="more_collections_text">Больше</h1>
+                    <h1 class="more_collections_text" id="more_objects">Больше</h1>
                 </div>
             </div>
         </div>
     </main>
-    <footer></footer>
+</div>
+<footer></footer>
+<script src="main.js"></script>
 </body>
 </html>

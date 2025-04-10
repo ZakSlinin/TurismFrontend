@@ -8,7 +8,7 @@ function init() {
     });
 
     // Нижегородский Кремль
-    var Kremlin = new ymaps.Placemark([56.3287, 44.0020], {
+    var Kremlin = new ymaps.Placemark([56.331226, 44.008872], {
         balloonContent: 'Нижегородский Кремль'
     });
 
@@ -17,6 +17,11 @@ function init() {
         balloonContent: 'Чкаловская лестница'
     });
 
+    var football = new ymaps.Placemark([56.337146, 43.963765], {
+        balloonContent: 'Стадион'
+    })
+
     myMap.geoObjects.add(Kremlin);
     myMap.geoObjects.add(ChkalovStaircase);
+    myMap.geoObjects.add(football);
 }

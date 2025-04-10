@@ -6,8 +6,18 @@
   font-weight: 300;
 }
 
+.page_container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .page_container {
+    width: 80%;
+  }
+}
 header {
-  background-color: #5E6B82;
+  background-image: url("../img/main_header_photo.svg");
   height: 25vh;
   width: 100%;
   display: flex;
@@ -16,62 +26,62 @@ header {
   align-items: center;
 }
 header .main_page_logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
+  height: 20vh;
 }
 header .text_about_city_div {
   background-color: #00306C;
   width: 100%;
   height: 5vh;
   display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 header .text_about_city_div .text_about_city {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
   color: white;
+}
+header .burger_menu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+header .burger_menu .burger-menu-container {
+  background-color: #000000;
+  height: 8vh;
+  width: 10vw;
 }
 
 main {
-  height: 75vh;
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4vh;
 }
-main .main_page_collections_div {
-  display: flex;
-  flex-direction: column;
-}
-main .collections_img {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2%;
+main .attractions_div {
   width: 100%;
 }
-main .collections_text, main .attractions_text {
-  margin-bottom: 2vh;
-  margin-top: 2vh;
+main .attractions_text_div {
+  text-align: center;
+}
+main .attractions_text {
+  margin: 2vh 0;
   color: #00306C;
   font-weight: bold;
 }
+main .collections_img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2%;
+  width: 100%;
+}
 main .first_time_in_city_collection {
   height: 20vh;
-  width: 100%;
-  border-radius: 20px;
+  border-radius: 25px;
   border: 1px solid black;
   position: relative;
   overflow: hidden;
 }
-main .first_time_in_city_collection .nn_kreml_photo {
+main .first_time_in_city_collection img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -86,26 +96,58 @@ main .first_time_in_city_collection .card_text {
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 2vw;
+  font-size: clamp(14px, 2vw, 20px);
 }
 main .more_collections {
   background-color: #5E6B82;
   height: 20vh;
-  width: 100%;
   border-radius: 20px;
   display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: center;
   align-items: center;
   color: white;
 }
 main .more_collections .more_collections_text {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  font-size: clamp(16px, 2vw, 24px);
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 520px) {
+  header .main_page_logo {
+    height: 25vh !important;
+  }
+  header .text_about_city_div {
+    height: 25vh !important;
+  }
+  header .text_about_city {
+    font-size: 4.5vw !important;
+    text-align: center;
+  }
+  header .burger_menu {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 5vh !important;
+  }
+  main .collections_img {
+    grid-template-columns: 1fr;
+  }
+  main .first_time_in_city_collection {
+    width: 100%;
+    height: 25vh;
+  }
+  main .more_collections {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card_text {
+    font-size: 3vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

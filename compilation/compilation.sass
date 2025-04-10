@@ -1,0 +1,68 @@
+*
+  margin: 0
+  padding: 0
+  font-family: 'Roboto', sans-serif
+  color: #00306C
+  font-weight: bold
+
+.сollection_full_photo
+  height: 50%
+  width: 50%
+  border-radius: 25px
+
+.page_container
+  width: 100%
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+
+header
+  background-image: url("../static/img/main_header_photo.svg")
+  height: 25vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+  .main_page_logo
+    height: 20vh
+
+  .text_about_city_div
+    background-color: #00306C
+    width: 100%
+    height: 5vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .text_about_city
+      color: white
+
+
+main
+  width: 80%
+  margin: 2vw
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 4vh
+
+@media screen and (max-width: 520px)
+  .сollection_full_photo
+    height: 30vh !important
+    width: 90vw !important
+    border-radius: 25px
+
+
+  header
+    .main_page_logo
+      height: 25vh !important
+
+    .text_about_city_div
+      height: 5vh!important
+
+    .text_about_city
+      font-size: 3.5vw !important
+      text-align: center
