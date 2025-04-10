@@ -11,7 +11,7 @@ function setHTML(item, templateData) {
     item.querySelector('#attraction_name').innerText = templateData.name
     item.querySelector('#attraction_adress').innerText = templateData.address
     item.querySelector('#attraction_price').innerText = templateData.price + 'Р'
-    item.querySelector('#attraction_time').innerText = String(templateData.time).split(' ')[0]
+    // item.querySelector('#attraction_time').innerText = String(templateData.time).split(' ')[0]
     item.querySelector('#attraction_image').src = String(templateData.image)
 
     setAddStatus(item.querySelector('.attraction_button'), templateData.id)
