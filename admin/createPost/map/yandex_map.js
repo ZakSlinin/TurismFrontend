@@ -1,12 +1,12 @@
-ymaps.ready(init);
+let glbalUserPoint = ''
 
 function init() {
-    var createPostMap = new ymaps.Map("map", {
+    let createPostMap = new ymaps.Map("map", {
         center: [56.326797, 44.006516],
         zoom: 10,
         controls: [],
         points: userPoint,
-    });
+    })
 
     var userPoint = []
 
@@ -23,9 +23,12 @@ function init() {
             balloonContent: title
         });
 
-        userPoint.push(placemark);
+        userPoint = placemark
+        glbalUserPoint = placemark
 
 
         createPostMap.geoObjects.add(placemark);
     });
 }
+
+ymaps.ready(init);
