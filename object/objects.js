@@ -51,16 +51,14 @@ function attraction_template_spawner(templateData) {
 
     item.querySelector('#object_id').innerText = templateData.id
     item.querySelector('#object_name').innerText = templateData.name
+    item.querySelector('#object_image').src = templateData.image
+
     setTagsToTemplate(templateData["tags"], item)
-
-    // TODO
-    //  add Images
-
     list.append(item)
     currentObject += 1
 }
 
-function starterObjects() {
+function starterObjects(arr) {
     while (currentObject < 4) {
         attraction_template_spawner(objectsArray[currentObject])
     }
@@ -88,36 +86,34 @@ function setPostData(event) {
 
 
 localStorage.setItem('current_attractions', [])
-setTags('.tags')
+// setTags('.tags')
 
-
-function loadTags() {
-    let tags = document.querySelector('.tags')
-
-    // localStorage.setItem('current_attractions', 'null')
-
-    if (String(localStorage.getItem('current_tags')) === 'null' ||
-        String(localStorage.getItem('current_tags')) === 'undefined' ||
-        String(localStorage.getItem('current_tags')) === ''
-    ) {
-        localStorage.setItem('current_tags', [])
-        tags.querySelector('#all_tag').classList.add('active')
-    } else {
-        tags.querySelector('#all_tag').classList.remove('active')
-
-        let currentStorage = String(localStorage.getItem('current_tags')).split(',').splice(1)
-
-        currentStorage.forEach((tag) => {
-            if (tag !== 'null' || tag !== 'undefined') {
-                try {
-                    let elemnt = document.getElementsByClassName(tag)
-                    elemnt[0].classList.add('active')
-                } catch (e) {
-                    console.error(e)
-                }
-            }
-        })
-    }
-}
-
-loadTags()
+//
+// function loadTags() {
+//     let tags = document.querySelector('.tags')
+//
+//     // localStorage.setItem('current_attractions', 'null')
+//
+//     if (String(localStorage.getItem('current_tags')) === 'null' ||
+//         String(localStorage.getItem('current_tags')) === 'undefined' ||
+//         String(localStorage.getItem('current_tags')) === ''
+//     ) {
+//         localStorage.setItem('current_tags', [])
+//         tags.querySelector('#all_tag').classList.add('active')
+//     } else {
+//         tags.querySelector('#all_tag').classList.remove('active')
+//
+//         let currentStorage = String(localStorage.getItem('current_tags')).split(',').splice(1)
+//
+//         currentStorage.forEach((tag) => {
+//             if (tag !== 'null' || tag !== 'undefined') {
+//                 try {
+//                     let elemnt = document.getElementsByClassName(tag)
+//                     elemnt[0].classList.add('active')
+//                 } catch (e) {
+//                     console.error(e)
+//                 }
+//             }
+//         })
+//     }
+// }
