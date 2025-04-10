@@ -10,7 +10,7 @@ function htmlData(data) {
     document.querySelector('#att_adress').innerText = data.address
     document.querySelector('#att_price').innerText = data.price
     document.querySelector('#attention_image').src = data.image
-    document.querySelector('#attention_description_string').innerText = data.description
+    document.querySelector('#attention_description_string').innerHTML = data.description
 
     idOfAttraction = data.id
     loadButtonState()

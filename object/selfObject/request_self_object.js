@@ -10,7 +10,8 @@ function htmlData(data) {
     document.querySelector('#obj_adress').innerText = data.address
     document.querySelector('#obj_price').innerText = data.price
     document.querySelector('#object_image').src = data.image
-    document.querySelector('#object_description_string').innerText = data.description
+
+    document.querySelector('#object_description_string').innerHTML = data.description
 
     idOfAttraction = data.id
 

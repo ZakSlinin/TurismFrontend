@@ -25,6 +25,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 40%;
+  gap: 10px;
 }
 .container .nav .create_post_nav, .container .nav .delete_post_nav {
   border-radius: 25px;
