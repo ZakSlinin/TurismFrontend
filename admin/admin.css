@@ -7,27 +7,27 @@ body {
   justify-content: center;
 }
 
-.container {
+.containers {
   width: 80%;
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  height: 120vh;
   align-items: center;
   gap: 20px;
 }
-.container .naming_of_page {
+.containers .naming_of_page {
   color: rgb(0, 48, 108);
   font-size: 2rem;
   font-weight: 700;
   text-align: left;
 }
-.container .nav {
+.containers .nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 40%;
   gap: 10px;
 }
-.container .nav .create_post_nav, .container .nav .delete_post_nav {
+.containers .nav .create_post_nav, .containers .nav .delete_post_nav {
   border-radius: 25px;
   border: 2px solid rgba(0, 0, 0, 0.25);
   background: rgb(154, 164, 182);
@@ -43,11 +43,11 @@ body {
   text-align: center;
   height: 100%;
 }
-.container .iframe_container {
+.containers .iframe_container {
   width: 100%;
   height: 100%;
 }
-.container .iframe_container iframe {
+.containers .iframe_container iframe {
   border: none;
   width: 100%;
   height: 100%;
