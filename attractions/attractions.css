@@ -183,9 +183,12 @@ body {
     color: white;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .attractions_container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr !important;
+  }
+  .map_container {
+    font-size: 2rv !important;
   }
 }
 
