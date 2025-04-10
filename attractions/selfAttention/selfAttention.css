@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -10,13 +14,14 @@ body {
   flex-direction: column;
   height: 100%;
   align-items: center;
-  gap: 20px;
+  line-height: 1rem;
 }
 .container .naming_of_page {
   color: rgb(0, 48, 108);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-break: strict;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
 }
 .container .attention_container {
   width: 100%;
@@ -24,9 +29,11 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  gap: 20px;
 }
 .container .attention_container .attention_photo_and_info {
-  width: 100%;
+  width: 80%;
+  padding: 30px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
@@ -40,6 +47,7 @@ body {
   overflow: hidden;
 }
 .container .attention_container .attention_photo_and_info img {
+  padding: 10px;
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -53,19 +61,22 @@ body {
 .container .attention_container .attention_photo_and_info .attention_info #att_name {
   display: flex;
   height: 100%;
-  line-break: anywhere;
+  line-break: strict;
 }
 .container .attention_container .attention_photo_and_info .attention_info #att_adress, .container .attention_container .attention_photo_and_info .attention_info #att_price {
   line-height: 0;
 }
 .container .attention_container .attention_photo_and_info .attention_info #att_price::after {
-  content: "Р";
+  content: " Р";
 }
 .container .attention_container .attention_description {
   width: 80%;
   min-height: 70px;
-  line-break: anywhere;
-  margin-top: 50px;
+  line-break: strict;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  text-align: center;
 }
 .container .attention_container .attention_description::first-letter {
   text-transform: uppercase;

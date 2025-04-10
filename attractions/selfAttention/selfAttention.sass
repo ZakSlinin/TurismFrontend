@@ -1,3 +1,6 @@
+*
+  font-family: 'Roboto', sans-serif
+
 body
   display: flex
   justify-content: center
@@ -8,13 +11,15 @@ body
   flex-direction: column
   height: 100%
   align-items: center
-  gap: 20px
+
+  line-height: 1rem
 
   .naming_of_page
     color: rgb(0, 48, 108)
-    font-size: 2rem
+    font-size: 1.5rem
+    line-break: strict
     font-weight: 700
-    text-align: left
+    text-align: center
 
   .attention_container
     width: 100%
@@ -22,9 +27,11 @@ body
     flex-direction: column
     align-items: center
     height: 100%
+    gap: 20px
 
     .attention_photo_and_info
-      width: 100%
+      width: 80%
+      padding: 30px 20px
       display: grid
       grid-template-columns: 1fr 1fr
       height: 100%
@@ -38,6 +45,7 @@ body
         overflow: hidden
 
       img
+        padding: 10px
         height: 100%
         width: 100%
         object-fit: contain
@@ -51,14 +59,14 @@ body
         #att_name
           display: flex
           height: 100%
-          line-break: anywhere
+          line-break: strict
 
         #att_adress, #att_price
           line-height: 0
 
         #att_price
           &::after
-            content: "Р"
+            content: " Р"
 
 
     //font-size: 1.5rem
@@ -66,8 +74,12 @@ body
     .attention_description
       width: 80%
       min-height: 70px
-      line-break: anywhere
-      margin-top: 50px
+      line-break: strict
+
+      border-radius: 25px
+      border: 1px solid rgba(0, 0, 0, 0.2)
+      padding: 30px 20px
+      text-align: center
 
       &::first-letter
         text-transform: uppercase

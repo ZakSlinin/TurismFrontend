@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -10,8 +14,7 @@ body {
   flex-direction: column;
   height: 100%;
   align-items: center;
-  gap: 20px;
-  line-height: 1fr;
+  line-height: 1rem;
 }
 .container .naming_of_page {
   color: rgb(0, 48, 108);
@@ -27,7 +30,8 @@ body {
   gap: 20px;
 }
 .container .object_container .object_photo_and_info {
-  width: 90%;
+  width: 80%;
+  padding: 30px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -40,6 +44,7 @@ body {
   border-radius: 25px;
 }
 .container .object_container .object_photo_and_info .object_photo img {
+  padding: 10px;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -53,14 +58,19 @@ body {
 .container .object_container .object_photo_and_info .object_info #obj_name {
   display: flex;
   height: 100%;
-  line-break: anywhere;
+  line-break: strict;
 }
 .container .object_container .object_photo_and_info .object_info #obj_price::after {
-  content: "Р";
+  content: " Р";
 }
 .container .object_container .object_description {
   width: 80%;
-  line-break: anywhere;
+  min-height: 70px;
+  line-break: strict;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  text-align: center;
 }
 .container .object_container .object_description:first-letter {
   text-transform: uppercase;
@@ -76,11 +86,10 @@ body {
   text-align: center;
 }
 .container .object_container .object_tags {
-  width: 90%;
+  width: 80%;
   text-align: center;
   border: 2px solid rgba(0, 0, 0, 0.25);
   background: #9aa4b6;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
   gap: 20px;
   border-radius: 20px;
   padding: 10px;

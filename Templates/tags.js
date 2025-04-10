@@ -4,7 +4,9 @@ let tag_template = `
     </button>
 `
 
-let tagsArr = ['еда', 'музеи', 'на улице', 'религия']
+let tagsArr = ['еда', 'музеи', 'на улице',
+    'религия', 'спорт', 'можно посмотреть',
+    'можно погулять', 'можно поесть']
 
 function setTags(element) {
     tagsArr.forEach(tag => {
