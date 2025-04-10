@@ -1,20 +1,14 @@
-let firstTimeInCity = document.getElementById("collection_img_id");
-
-firstTimeInCity.addEventListener("click", function (event) {
-    window.location.href = 'compilation/compilation.html'
-})
-
-let attraction = document.getElementById("attractions_img_id");
+let attraction = document.getElementById("attraction_more_collections");
 attraction.addEventListener("click", function (event) {
-    window.location.href = 'attractions/attractions.html'
+    window.open('attractions/attractions.html', '_blank')
 })
 
-let moreCompilation = document.getElementById("more_compilation");
+let moreCompilation = document.getElementById("collection_img_id");
 moreCompilation.addEventListener("click", function (event) {
-    window.location.href = 'compilation/compilation.html'
+    window.open('compilation/compilation.html', '_blank')
 })
 
-let moreObjects = document.getElementById("more_objects");
+let moreObjects = document.getElementById("objects_more");
 moreObjects.addEventListener("click", function (event) {
-    window.location.href = 'object/object.html'
+    window.open('object/object.html', '_blank')
 })

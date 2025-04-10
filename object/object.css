@@ -80,11 +80,12 @@
   border: 2px solid white;
   border-radius: 25px;
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 @media (min-width: 800px) and (max-width: 1024px) {
   .object .image_conatiner {
