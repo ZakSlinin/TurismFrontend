@@ -12,3 +12,15 @@ let moreObjects = document.getElementById("objects_more");
 moreObjects.addEventListener("click", function (event) {
     window.open('object/object.html', '_blank')
 })
+
+
+let obj = document.querySelector('#obj')
+let attr = document.querySelector('#attr')
+
+obj.addEventListener("click", function (event) {
+    window.open('object/selfObject/selfObject.html?id=17', '_blank')
+})
+
+attr.addEventListener("click", function (event) {
+    window.open('attractions/selfAttention/selfAttention.html?id=13', '_blank')
+})

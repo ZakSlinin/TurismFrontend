@@ -18,6 +18,7 @@
 }
 header {
   background-image: url("../img/main_header_photo.svg");
+  background-size: cover;
   height: 25vh;
   width: 100%;
   display: flex;
@@ -27,6 +28,7 @@ header {
 }
 header .main_page_logo {
   height: 20vh;
+  object-fit: cover;
 }
 header .text_about_city_div {
   background-color: #00306C;
