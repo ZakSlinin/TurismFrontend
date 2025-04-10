@@ -36,7 +36,7 @@ function attraction_template_spawner(templateData) {
 }
 
 function starterAttractions() {
-    while (currentAttractions < 4) {
+    while (currentAttractions < 6) {
         attraction_template_spawner(attractionsArray[currentAttractions])
     }
 }
@@ -48,7 +48,7 @@ function checkAttraction_isCanBeCreated() {
 }
 
 window.onscroll = function (e) {
-    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 500) {
         checkAttraction_isCanBeCreated()
         checkAttraction_isCanBeCreated()
     }
