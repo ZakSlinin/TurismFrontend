@@ -39,9 +39,9 @@ function createNewObject() {
     let price = document.querySelector('#price_of_post').value
     let description = document.querySelector('#description_of_post').value
 
+    // let map = JSON.stringify(glbalUserPoint.at(-1))
 
-    let map = JSON.stringify('map', glbalUserPoint)
-
+    let map = JSON.stringify({})
 
     if (selOfType.value === 'Объекты') {
         createObject(name, address, description, map, image, price)
