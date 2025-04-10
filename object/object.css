@@ -173,7 +173,7 @@ header .nav a img {
   border-radius: 90px;
   background: rgb(171, 202, 211);
   border: none;
-  padding: 5px 15px;
+  padding: 15px;
   margin: 5px 0;
   color: rgb(27, 77, 88);
   font-weight: 700;
@@ -182,7 +182,7 @@ header .nav a img {
 }
 @media (min-width: 800px) and (max-width: 1024px) {
   .object .info_container .tags_container .tag {
-    padding: 5px 30px;
+    padding: 10px 30px;
     font-size: 25px;
   }
 }
