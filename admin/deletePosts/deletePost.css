@@ -53,6 +53,7 @@ body {
   gap: 20px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 25px;
+  padding: 10px;
 }
 .form .objects_container .object_container .image_conatiner {
   width: 100%;

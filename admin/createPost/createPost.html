@@ -7,7 +7,7 @@
     <script src="../../Templates/tags.js"></script>
     <script src="popup.js" type="module"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_UA&apikey=config.apiKey" type="text/javascript"></script>
-    <script src="map/yandex_map.js" type="text/javascript"></script>
+<!--    <script src="map/yandex_map.js" type="text/javascript"></script>-->
 </head>
 <body>
 <div class="form">
@@ -36,13 +36,6 @@
         <textarea id="description_of_post" name="postDescription"></textarea>
     </span>
 
-    <div class="map_container">
-        <h3>Выберите вашу точку на карте</h3>
-        <span class="map_data">
-            <div class="map" id="map" ></div>
-        </span>
-    </div>
-
     <select class="selectorOfType">
         <option>Объекты</option>
         <option>Достопримечательности</option>
@@ -55,7 +48,7 @@
         </div>
     </div>
 
-    <button class="create">Создать</button>
+    <button id="createBTN" class="createBTN">Создать</button>
 </div>
 
 <div class="popup" id="testPopup">

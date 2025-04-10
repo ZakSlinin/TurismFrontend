@@ -27,20 +27,12 @@ export class HTTP_client {
         return tagsData
     }
 
-    async postObjects(name, address, description, map, tags, image, price, time) {
-        let form = JSON.stringify({
-            "name": name,
-            "address": address,
-            "description": description,
-            "map": map,
-            "image": image,
-            "price": price,
-            "time": time
-        })
+    async postObjects(form) {
+        return await this.http.post(this.objectAPI, form)
+    }
 
-        return await this.http.post(this.link_to_change, form, {
-            'Content-Type': 'application/json',
-        })
+    async postAttractions(form) {
+        return await this.http.post(this.attractionAPI, form)
     }
 
     async getAttractions(...tags) {
@@ -74,6 +66,14 @@ export class HTTP_client {
 
     async getCollections() {
         return await this.http.get(this.compilationsApi)
+    }
+
+    async delObject(id) {
+        return await this.http.delete(`${this.objectAPI}${id}/`)
+    }
+
+    async delAttraction(id) {
+        return await this.http.delete(`${this.attractionAPI}${id}/`)
     }
 
 }

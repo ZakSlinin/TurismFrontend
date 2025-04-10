@@ -106,7 +106,7 @@ body {
   outline: none;
   font-size: 17px;
 }
-.form .create {
+.form .createBTN {
   width: 80%;
   height: max-content;
   padding: 20px 30px;

@@ -1,6 +1,5 @@
 import {HTTP_client} from "../../services/http_client/http_client.js"
 
-import createPostMap from "map/yandex_map"
 
 let selOfType = document.querySelector('.selectorOfType')
 
@@ -17,7 +16,8 @@ function select_changed(e) {
 }
 
 
-document.querySelector('.create').addEventListener('click', (e) => {
+document.querySelector('#createBTN').addEventListener('click', (e) => {
+    console.log(e)
     createNewObject()
 })
 
@@ -39,13 +39,9 @@ function createNewObject() {
     let price = document.querySelector('#price_of_post').value
     let description = document.querySelector('#description_of_post').value
 
-    let mapState = {
-        center: createPostMap.center,
-        zoom: createPostMap.zoom,
-        points: createPostMap.points,
-    };
+    // let map = JSON.stringify(glbalUserPoint.at(-1))
 
-    let map = JSON.stringify({'map': mapState})
+    let map = JSON.stringify({})
 
     if (selOfType.value === 'Объекты') {
         createObject(name, address, description, map, image, price)
@@ -73,6 +69,7 @@ function createObject(name, address, description, map, image, price) {
     http.postObjects(formData)
         .then((data) => {
             console.log(data)
+            window.location.reload()
         })
 }
 
@@ -93,5 +90,6 @@ function createAttraction(name, address, description, map, image, price) {
     http.postAttractions(formData)
         .then((data) => {
             console.log(data)
+            window.location.reload()
         })
 }

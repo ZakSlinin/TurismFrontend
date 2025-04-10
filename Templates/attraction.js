@@ -11,9 +11,9 @@ let attract = `
                     <h4>Стоимость</h4>
                     <h3 id="attraction_price">ЦЕНА</h3>
                 </span>
-                <span class="time_container">
-                    <h3 id="attraction_time">Время</h3>
-                </span>
+<!--                <span class="time_container">-->
+<!--                    <h3 id="attraction_time">Время</h3>-->
+<!--                </span>-->
             </span>
         </span>
         <span class="add_attraction">

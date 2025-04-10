@@ -51,6 +51,11 @@ body {
   gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media (min-width: 800px) and (max-width: 1024px) {
+  .container .attractions_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .attraction {
   line-height: 1rem;
@@ -63,6 +68,11 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+@media (min-width: 800px) and (max-width: 1024px) {
+  .attraction {
+    height: 700px;
+  }
+}
 .attraction .image_conatiner {
   border: 2px solid white;
   border-radius: 25px;
@@ -74,6 +84,11 @@ body {
   height: 100%;
   max-height: 150px;
   overflow: hidden;
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+  .attraction .image_conatiner {
+    height: 400px;
+  }
 }
 .attraction .image_conatiner img {
   width: 100%;
@@ -90,6 +105,11 @@ body {
   grid-template-rows: 3fr 2fr;
   height: 50%;
   padding: 0 10px;
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+  .attraction .info_container {
+    font-size: 30px;
+  }
 }
 .attraction .info_container #attraction_name {
   display: flex;

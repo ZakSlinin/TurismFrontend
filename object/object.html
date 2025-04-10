@@ -20,33 +20,34 @@
     <span class="naming_of_page">
         <h1>Объекты</h1>
     </span>
-    <span class="tags">
-<!--        TODO-->
-<!--         Сделать изменение данных в зависимости от данных-->
-        <button id="all_tag" onclick="changeTagStatus(event)" class="tag active">все</button>
-    </span>
-    <div class="map_container">
-        <h3>Карта достопримечательностей</h3>
-        <div id="map" class="map">
+    <!--    <span class="tags">-->
+    <!--&lt;!&ndash;        TODO&ndash;&gt;-->
+    <!--&lt;!&ndash;         Сделать изменение данных в зависимости от данных&ndash;&gt;-->
+    <!--        <button id="all_tag" onclick="changeTagStatus(event)" class="tag active">все</button>-->
+    <!--    </span>-->
+    <!--    <div class="map_container">-->
+    <!--        <h3>Карта достопримечательностей</h3>-->
+    <!--        <div id="map" class="map">-->
 
-            <!--            TODO-->
-            <!--             YANDEX MAPS API WITH points-->
+    <!--            &lt;!&ndash;            TODO&ndash;&gt;-->
+    <!--            &lt;!&ndash;             YANDEX MAPS API WITH points&ndash;&gt;-->
 
-        </div>
-    </div>
+    <!--        </div>-->
+    <!--    </div>-->
     <div class="objects_container">
 
     </div>
 </div>
 
 <template id="object_template">
-
-</template>
-<template id="tag_template">
+    <img src="#" id="object_image">
     <p id="object_name"></p>
     <p id="object_id"></p>
     <span class="tags_container"></span>
     <button>0</button>
+</template>
+
+<template id="tag_template">
 </template>
 
 <script src="objects.js"></script>
